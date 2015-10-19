@@ -1,0 +1,34 @@
+/* global */
+html, body {
+	height: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+}
+
+/* tools */
+.absol {
+	position: absolute;
+}
+.rela {
+	position: relative;
+}
+
+/* header */
+.navbar {
+	margin-bottom: 0;
+}
+
+/* sidebar */
+.sidebar {
+	width: 190px;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	background-color: #ddd;
+}
+
+/* right content */
+.right-content {
+	margin-left: 190px;
+}

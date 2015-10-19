@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="renderer" content="webkit">
+	<title></title>
+	<!-- vendor CSS -->
+	<link rel="stylesheet" href="../lib/bootstrap/dist/css/bootstrap.min.css">
+	<!-- project core CSS -->
+	<link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+<div ng-include="'core/header.html'"></div>
+<div class="rela main-content">
+	<div class="absol sidebar" ng-include="'core/sidebar.html'"></div>
+	<div class="right-content">
+		<div class="container-fluid" ui-view></div>
+	</div>
+</div>
+
+<!-- vendor -->
+<!--[if lte IE 8]>
+<script src="../node_modules/es5-shim/es5-shim.min.js"></script>
+<script src="../node_modules/es5-shim/es5-sham.min.js"></script>
+<script src="../lib/respond.min.js"></script>
+<![endif]-->
+<script src="../lib/jquery/dist/jquery.min.js"></script>
+<script src="../lib/angular/angular.min.js"></script>
+<script src="../lib/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script src="../lib/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+<script src="../lib/angular/angular-locale_zh-cn.js"></script>
+<!-- main -->
+<script src="../modules/config.js"></script>
+<script src="../modules/application.js"></script>
+<!-- core -->
+<script src="../modules/core/core.module.js"></script>
+<script src="../modules/core/config/core.routes.js"></script>
+<script src="../modules/core/directives/datepicker.directive.js"></script>
+
+</body>
+</html>
