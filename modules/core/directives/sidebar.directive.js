@@ -83,6 +83,9 @@ angular.module('core').directive('tips', function () {
                     'border': '6px solid transparent',
                     'position': 'absolute'
                 });
+            var arrowObjHeight = arrowObj.height(),
+                arrowObjWidth = arrowObj.outerWidth();
+                
             if (linkObj.css('position') !== 'relative') {
                 linkObj.css('position', 'relative');
             }
@@ -94,9 +97,7 @@ angular.module('core').directive('tips', function () {
             var tipObjHeight = tipObj.height(),
                 tipObjWidth = tipObj.width(),
                 tipObOjWidth = tipObj.outerWidth(),
-                tipObjOHeight = tipObj.outerHeight(),
-                arrowObjHeight = arrowObj.outerHeight(),
-                arrowObjWidth = arrowObj.outerWidth();
+                tipObjOHeight = tipObj.outerHeight();
             function compareHeight(tipH, objH) {
                 if (tipH > objH) {
                     return - Math.abs(tipH - objH)/2;
@@ -121,7 +122,7 @@ angular.module('core').directive('tips', function () {
                         'top': compareHeight(tipObjOHeight, objOHeight),
                         'left': objWidth + 10
                     });
-                    console.log(arrowObj, tipObjHeight, arrowObjHeight, arrowObjWidth);
+                    // console.log(arrowObj, tipObjHeight, arrowObjHeight, arrowObjWidth);
                     arrowObj.css({
                         'top': (tipObjHeight - arrowObjHeight)/2,
                         'left': - arrowObjWidth

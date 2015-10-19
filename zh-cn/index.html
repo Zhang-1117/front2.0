@@ -33,6 +33,14 @@
 				</a>
 			</li>
 		</ul>
+		<div class="sidebar-bottom absol clearfix">
+            <a href="javascript:void(0);" class="text-center pull-left" onClick="javascript:window.open('http://www.sundns.com/custom_service_link.php', '_blank', 'height=544, width=644,toolbar=no,scrollbars=no,menubar=no,status=no');" ng-class="{small: !coll}" tips message="客服咨询" direc="{{ coll ? 'top' : 'right' }}" color="#fd8016">
+                <i class="icon-yo-nav yo-lync"></i>
+            </a>
+            <a href="javascript:void(0);" class="text-center pull-left" ng-class="{small: !coll}" tips message="咨询热线: 400-720-0020" direc="{{ coll ? 'top' : 'right' }}" color="#fd8016">
+                <i class="icon-yo-nav yo-phone"></i>
+            </a>
+        </div>
 	</div>
 	<div class="right-content">
 		<div class="container-fluid" ui-view></div>

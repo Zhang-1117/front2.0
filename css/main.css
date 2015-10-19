@@ -107,6 +107,37 @@ h1, h2, h3, h4, h5, h6 {
 .active .yo-paylist {
 	background-position: -26px -234px;
 }
+.yo-lync {
+	background-position: 0 -260px;
+}
+a:hover .yo-lync {
+	background-position: -26px -260px;
+}
+.yo-phone {
+	background-position: 0 -286px;
+}
+a:hover .yo-phone {
+	background-position: -26px -286px;
+}
+.sidebar-bottom {
+	width: 100%;
+	bottom: 0;
+}
+.sidebar-bottom > a {
+	width: 94.5px;
+	height: 40px;
+	line-height: 40px;
+	border-top: solid 1px #5a6279;
+}
+.sidebar-bottom > a:first-child {
+	border-right: solid 1px #5a6279;
+}
+.sidebar-bottom > a.small {
+	width: 100%;
+}
+.sidebar-bottom > a.small:first-child {
+	border-right-width: 0;
+}
 /* right content */
 .right-content {
 	margin-left: 190px;
