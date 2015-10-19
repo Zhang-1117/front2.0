@@ -8,7 +8,7 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
 		state('home', {
 			url: '/',
 			templateUrl: 'core/home.html',
-			controller: function ($scope, $http, $state) {
+			controller: function ($scope, $http, $state, $rootScope) {
 				$scope.dataList = {
 					list: [],
 					total: undefined

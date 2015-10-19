@@ -1,9 +1,8 @@
 'use strict';
-
 /**
  * 侧边栏收缩
  */
-angular.module('core').directive('sideCollapse', function ($rootScope) {
+angular.module('core').directive('sideCollapse', function () {
     return {
         restrict: 'EA',
         scope: {
@@ -16,7 +15,7 @@ angular.module('core').directive('sideCollapse', function ($rootScope) {
                 leftWidth = sideObj.width(),
                 marLeft = parseInt(rightObj.css('marginLeft'));
             var anim = function () {
-                console.log(scope.close);
+                console.log(sideObj, rightObj);
                 if (scope.close) {
                     wordObj.hide();
                     sideObj.stop(false, true).animate({
@@ -96,7 +95,7 @@ angular.module('core').directive('tips', function () {
                 tipObjWidth = tipObj.width(),
                 tipObOjWidth = tipObj.outerWidth(),
                 tipObjOHeight = tipObj.outerHeight(),
-                arrowObjHeight = arrowObj.height(),
+                arrowObjHeight = arrowObj.outerHeight(),
                 arrowObjWidth = arrowObj.outerWidth();
             function compareHeight(tipH, objH) {
                 if (tipH > objH) {
@@ -106,7 +105,7 @@ angular.module('core').directive('tips', function () {
                 }
             }
             linkObj.on('mouseover', function () {
-                console.log(scope.close);
+                // console.log(scope);
                 // console.log(linkObj, linkObj.length);
                 if (scope.close) return;
 
@@ -122,6 +121,7 @@ angular.module('core').directive('tips', function () {
                         'top': compareHeight(tipObjOHeight, objOHeight),
                         'left': objWidth + 10
                     });
+                    console.log(arrowObj, tipObjHeight, arrowObjHeight, arrowObjWidth);
                     arrowObj.css({
                         'top': (tipObjHeight - arrowObjHeight)/2,
                         'left': - arrowObjWidth

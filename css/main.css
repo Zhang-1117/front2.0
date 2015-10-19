@@ -32,10 +32,13 @@ h1, h2, h3, h4, h5, h6 {
 	top: 0;
 	left: 0;
 	bottom: 0;
-	background-color: #ddd;
+	background-color: #262f3d;
 }
 .sidebar .nav-pills > li > a {
 	border-radius: 0;
+}
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+	background-color: #414d69;
 }
 .icon-yo-nav {
 	width: 26px;

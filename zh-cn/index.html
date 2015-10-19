@@ -11,13 +11,34 @@
 	<link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
-<div ng-include="'core/header.html'"></div>
+<div class="navbar navbar-default" role="navigation">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<a ui-sref="home" class="navbar-brand">project name</a>
+			<a href="javascript:;" side-collapse close="coll" class="pull-left">side</a>
+		</div>
+		<ul class="nav navbar-nav navbar-right">
+			<li><a href="#">username</a></li>
+			<li><a href="">退出</a></li>
+		</ul>
+	</div>
+</div>
 <div class="rela main-content">
-	<div class="absol sidebar" ng-include="'core/sidebar.html'"></div>
+	<div class="absol sidebar">
+		<ul class="nav nav-pills nav-stacked">
+			<li ng-class="{active: $state.includes('home')}" tips message="控制台首页" direc="right" close="coll">
+				<a ui-sref="home">
+					<i class="icon-yo-nav yo-home"></i>
+					<span>控制台首页</span>
+				</a>
+			</li>
+		</ul>
+	</div>
 	<div class="right-content">
 		<div class="container-fluid" ui-view></div>
 	</div>
 </div>
+<div ng-include="'./core/footer.html'"></div>
 
 <!-- vendor -->
 <!--[if lte IE 8]>
