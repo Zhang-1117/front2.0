@@ -3,45 +3,36 @@
 /**
  * 侧边栏收缩
  */
-directives.directive('sideCollapse', function ($rootScope) {
+angular.module('core').directive('sideCollapse', function ($rootScope) {
     return {
         restrict: 'EA',
         scope: {
             close: '='
         },
-        transclude: true,
         link: function (scope, ele, attr) {
             var sideObj = angular.element('.sidebar'),
-                // rightObj = angular.element('.panel_right'),
+                rightObj = angular.element('.right-content'),
                 wordObj = sideObj.find('span'),
                 leftWidth = sideObj.width(),
-                // marLeft = parseInt(rightObj.css('marginLeft')),
-                aObj = angular.element('.panel_cont > a'),
-                aWidth = aObj.width();
-
+                marLeft = parseInt(rightObj.css('marginLeft'));
             var anim = function () {
+                console.log(scope.close);
                 if (scope.close) {
                     wordObj.hide();
                     sideObj.stop(false, true).animate({
                         width: 60
                     }, 300);
-                    // rightObj.stop(false, true).animate({
-                    //     marginLeft: 80
-                    // }, 300).queue(function () {
-                    //     commonGridOptions.plugins[0].updateGridLayout();
-                    //     jQuery(this).dequeue();
-                    // });
+                    rightObj.stop(false, true).animate({
+                        marginLeft: 60
+                    }, 500);
                 } else {
                     sideObj.stop(false, true).animate({
                         width: leftWidth
                     }, 500);
                     wordObj.delay(200).stop(false, true).fadeIn(300);
-                    // rightObj.stop(false, true).animate({
-                    //     marginLeft: marLeft
-                    // }, 500).queue(function () {
-                    //     commonGridOptions.plugins[0].updateGridLayout();
-                    //     jQuery(this).dequeue();
-                    // });
+                    rightObj.stop(false, true).animate({
+                        marginLeft: marLeft
+                    }, 500);
                 }
                 scope.close = !scope.close;
                 scope.$apply();
@@ -59,7 +50,7 @@ directives.directive('sideCollapse', function ($rootScope) {
  * direc -> 方向  top | right
  * useage: <a tips message="这是个链接" color="#fff" bg-color="#333" href="#">链接</a>
  */
-directives.directive('tips', function () {
+angular.module('core').directive('tips', function () {
     return {
         restrict: 'EA',
         replace: false,
@@ -85,7 +76,7 @@ directives.directive('tips', function () {
                     'position': 'absolute',
                     'zIndex': 100,
                     'color': scope.color ? scope.color : '#fff'
-                }).addClass('tips').text(scope.message).attr('x-ms-format-detection', 'none'),
+                }).addClass('tips').text(scope.message),
                 arrowObj = jQuery('<i/>').css({
                     'display': 'block',
                     'width': 0,
@@ -115,7 +106,7 @@ directives.directive('tips', function () {
                 }
             }
             linkObj.on('mouseover', function () {
-                // console.log(scope.close);
+                console.log(scope.close);
                 // console.log(linkObj, linkObj.length);
                 if (scope.close) return;
 

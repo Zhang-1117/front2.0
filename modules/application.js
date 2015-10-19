@@ -51,7 +51,11 @@ angular.module(ApplicationConfiguration.applicationModuleName, ApplicationConfig
     ])
     .config(function(datepickerConfig) {
         datepickerConfig.showWeeks = false;
-    });
+    })
+    .run(['$rootScope', '$state', function($rootScope, $state) {
+        $rootScope.$state = $state;
+        $rootScope.coll = true;
+    }]);
 
 angular.element(document).ready(function() {
     if (window.location.hash === '#_=_') window.location.hash = '#!';

@@ -5,6 +5,13 @@ html, body {
 h1, h2, h3, h4, h5, h6 {
 	margin: 0;
 }
+[class^="icon-"] {
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	margin-top: 1px;
+	line-height: 14px;
+}
 
 /* tools */
 .absol {
@@ -27,7 +34,76 @@ h1, h2, h3, h4, h5, h6 {
 	bottom: 0;
 	background-color: #ddd;
 }
-
+.sidebar .nav-pills > li > a {
+	border-radius: 0;
+}
+.icon-yo-nav {
+	width: 26px;
+	height: 26px;
+	background-image: url(../img/nav.png);
+	background-repeat: no-repeat;
+	vertical-align: middle;
+}
+.yo-home {
+	background-position: 0 0;
+}
+.active .yo-home {
+	background-position: -26px 0;
+}
+.yo-host {
+	background-position: 0 -26px;
+}
+.active .yo-host {
+	background-position: -26px -26px;
+}
+.yo-disk {
+	background-position: 0 -52px;
+}
+.active .yo-disk {
+	background-position: -26px -52px;
+}
+.yo-load {
+	background-position: 0 -78px;
+}
+.active .yo-load {
+	background-position: -26px -78px;
+}
+.yo-db {
+	background-position: 0 -104px;
+}
+.active .yo-db {
+	background-position: -26px -104px;
+}
+.yo-memory {
+	background-position: 0 -130px;
+}
+.active .yo-memory {
+	background-position: -26px -130px;
+}
+.yo-protection {
+	background-position: 0 -156px;
+}
+.active .yo-protection {
+	background-position: -26px -156px;
+}
+.yo-cdn {
+	background-position: 0 -182px;
+}
+.active .yo-cdn {
+	background-position: -26px -182px;
+}
+.yo-personal {
+	background-position: 0 -208px;
+}
+.active .yo-personal {
+	background-position: -26px -208px;
+}
+.yo-paylist {
+	background-position: 0 -234px;
+}
+.active .yo-paylist {
+	background-position: -26px -234px;
+}
 /* right content */
 .right-content {
 	margin-left: 190px;
