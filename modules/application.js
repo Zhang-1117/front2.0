@@ -54,7 +54,10 @@ angular.module(ApplicationConfiguration.applicationModuleName, ApplicationConfig
     })
     .run(['$rootScope', '$state', function($rootScope, $state) {
         $rootScope.$state = $state;
-        $rootScope.coll = true;
+        $rootScope.coll = true; // 侧边栏初始状态为打开
+        $rootScope.refresh = function () { // 刷新页面
+            $state.reload();
+        };
     }]);
 
 angular.element(document).ready(function() {

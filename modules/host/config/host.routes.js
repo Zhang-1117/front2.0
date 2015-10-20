@@ -5,6 +5,7 @@ angular.module('host').config(['$stateProvider', '$urlRouterProvider',
 		$stateProvider.
 		state('host', {
 			url: '/host',
-			templateUrl: 'host/host.html'
+			templateUrl: 'host/host.html',
+			controller: 'hostCtrl'
 		});
 	}]);

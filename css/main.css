@@ -19,6 +19,9 @@ h3 {
 h4 {
 	font-size: 14px;
 }
+a, a:hover, a:active {
+	text-decoration: none;
+}
 [class^="icon-"] {
 	display: inline-block;
 	width: 14px;
@@ -33,9 +36,22 @@ h4 {
 	line-height: 40px;
 	margin: 10px 0;
 }
+.yo-btns {
+	margin: 15px 0;
+}
+.yo-table {
+	font-size: 12px;
+}
+.yo-table thead th {
+	text-align: center;
+	color: #3685d3;
+}
+.yo-table .operation a {
+	color: #3685d3;
+}
 
 /* bootstrap复写 */
-.btn {
+.btn, .form-control, .input-group-addon, .modal-content {
 	border-radius: 0;
 }
 
