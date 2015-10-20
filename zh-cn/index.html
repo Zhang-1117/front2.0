@@ -32,6 +32,12 @@
 					<span>控制台首页</span>
 				</a>
 			</li>
+			<li ng-class="{active: $state.includes('host')}" tips message="云主机" direc="right" close="coll">
+				<a ui-sref="host">
+					<i class="icon-yo-nav yo-host"></i>
+					<span>云主机</span>
+				</a>
+			</li>
 		</ul>
 		<div class="sidebar-bottom absol clearfix">
             <a href="javascript:void(0);" class="text-center pull-left" onClick="javascript:window.open('http://www.sundns.com/custom_service_link.php', '_blank', 'height=544, width=644,toolbar=no,scrollbars=no,menubar=no,status=no');" ng-class="{small: !coll}" tips message="客服咨询" direc="{{ coll ? 'top' : 'right' }}" color="#fd8016">
@@ -67,6 +73,8 @@
 <script src="../modules/core/config/core.routes.js"></script>
 <script src="../modules/core/directives/datepicker.directive.js"></script>
 <script src="../modules/core/directives/sidebar.directive.js"></script>
-
+<!-- host -->
+<script src="../modules/host/host.module.js"></script>
+<script src="../modules/host/config/host.routes.js"></script>
 </body>
 </html>

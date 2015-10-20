@@ -1,9 +1,23 @@
 /* global */
+body, ol, ul, li, dl, dd, dt, table, tr, td, div, p, img, h1, h2, h3, h4, h5, h6, i, var, em, a, input {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Microsoft yahei", Simsun, Arial;
+    font-size: 14px;
+    color: #333;
+}
 html, body {
 	height: 100%;
 }
 h1, h2, h3, h4, h5, h6 {
 	margin: 0;
+	font-weight: normal;
+}
+h3 {
+	font-size: 18px;
+}
+h4 {
+	font-size: 14px;
 }
 [class^="icon-"] {
 	display: inline-block;
@@ -11,6 +25,18 @@ h1, h2, h3, h4, h5, h6 {
 	height: 14px;
 	margin-top: 1px;
 	line-height: 14px;
+}
+.main-content {
+	min-height: 760px;
+}
+.main-title {
+	line-height: 40px;
+	margin: 10px 0;
+}
+
+/* bootstrap复写 */
+.btn {
+	border-radius: 0;
 }
 
 /* tools */
@@ -36,9 +62,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 .sidebar .nav-pills > li > a {
 	border-radius: 0;
+	color: #b7c6d7;
 }
-.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+.sidebar .nav-pills > li > a > span {
+	padding-left: 15px;
+}
+.sidebar .nav-stacked>li+li {
+	margin-top: 0;
+}
+.sidebar .nav-pills>li.active>a,.sidebar .nav-pills>li.active>a:focus,.sidebar .nav-pills>li.active>a:hover,
+.sidebar .nav>li>a:focus,.sidebar .nav>li>a:hover {
 	background-color: #414d69;
+	color: #fff;
 }
 .icon-yo-nav {
 	width: 26px;
