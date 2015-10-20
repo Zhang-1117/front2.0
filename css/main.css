@@ -21,6 +21,7 @@ h4 {
 }
 a, a:hover, a:active {
 	text-decoration: none;
+	cursor: pointer;
 }
 [class^="icon-"] {
 	display: inline-block;
@@ -54,9 +55,6 @@ a, a:hover, a:active {
 .btn, .form-control, .input-group-addon, .modal-content {
 	border-radius: 0;
 }
-.navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
-	margin-left: 0px;
-}
 
 /* tools */
 .absol {
@@ -70,57 +68,101 @@ a, a:hover, a:active {
 .navbar {
 	margin-bottom: 0;
 	width: 100%;
-	min-width: 1000px;
-	height: 50px;
 	background: #1b242f;
 	border: none;
-	border-radius: 0px;
+	border-radius: 0;
 }
 .navbar-header .logo {
 	width: 120px;
-	height: 50px;
 	background: url(../img/panel-logo.png) 0 center no-repeat;
+	margin-left: 15px;
 }
 .navbar-header .version {
 	color: #b6c4d4;
-	line-height:65px;
 	text-indent: -12px;
 	font-size: 12px;
+	margin-top: 24px;
 }
 .navbar-header .side-open {
 	width: 16px;
 	height: 50px;
 	background: url(../img/panel-openli.png) 0 center no-repeat;
-	margin-left: 24px;
+	margin-left: 26px;
 }
 .navbar-header .other-links {
 	color: #b6c4d4;
-	line-height: 50px;
 	padding: 0 20px;
 	cursor: pointer;
-	display: relative;
+	line-height: 50px;
+	margin-left: 10px;
 }
-.other-links:hover {
-	background-color: #414d69;
-}
-
 .other-links > div {
 	display: none;
     top: 50px;
-	left: 205px;
+	left: 216px;
 	z-index: 100;
 	background-color: #fff;
 	border: 1px solid #b6c4d4;
 	border-top: 0;
 	width: 129px;
-	text-align: center;
+	padding: 6px 0;
+}
+.other-links span {
+	display: inline-block;
+}
+.other-links:hover,
+.nav-right .nav-user:hover{
+	background-color: #414d69;
+}
+.chevron-down {
+	width: 14px;
+  	height: 10px;
+  	background: url(../img/down.png) -4px -7px no-repeat;
 }
 .other-links > div > a {
 	display: block;
 	line-height: 30px;
 }
-.other-links:hover > div {
+.other-links:hover > div,
+.nav-right .nav-user:hover > div {
 	display: block;
+}
+.other-links:hover > .chevron-down,
+.nav-right .nav-user:hover > .chevron-down
+{
+	background-position: -4px -26px;
+}
+.other-links > div > a:hover {
+	background-color: #fa6900;
+	color: #fff;
+}
+.nav-right .help-link {
+	color: #b6c4d4;
+	padding: 14px 20px;
+}
+.nav-right .nav-user {
+	color: #b6c4d4;
+	padding: 14px 20px;
+}
+
+.nav-right .nav-user > div {
+	display: none;
+    top: 50px; 
+    left: 0;
+    z-index: 100;
+    background-color: #fff;
+    border: 1px solid #b6c4d4;
+    border-top: 0;
+    width: 100%;
+}
+.nav-right .nav-user > div a {
+	display: block;
+  	color: #1b242f;
+  	line-height: 40px;
+  	padding: 0 20px;
+} 
+.nav-right .nav-user span {
+	display: inline-block;
 }
 /* sidebar */
 .sidebar {
