@@ -15,7 +15,7 @@ angular.module('core').directive('sideCollapse', function () {
                 leftWidth = sideObj.width(),
                 marLeft = parseInt(rightObj.css('marginLeft'));
             var anim = function () {
-                console.log(sideObj, rightObj);
+                // console.log(sideObj, rightObj);
                 if (scope.close) {
                     wordObj.hide();
                     sideObj.stop(false, true).animate({
@@ -27,11 +27,11 @@ angular.module('core').directive('sideCollapse', function () {
                 } else {
                     sideObj.stop(false, true).animate({
                         width: leftWidth
-                    }, 500);
-                    wordObj.delay(200).stop(false, true).fadeIn(300);
+                    }, 200);
+                    wordObj.delay(300).stop(false, true).fadeIn(300);
                     rightObj.stop(false, true).animate({
                         marginLeft: marLeft
-                    }, 500);
+                    }, 300);
                 }
                 scope.close = !scope.close;
                 scope.$apply();

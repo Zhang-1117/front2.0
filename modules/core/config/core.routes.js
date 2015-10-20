@@ -64,10 +64,6 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
 					}
 					console.log($scope.selectedList);
 				};
-
-				$scope.refresh = function () { // 放置在根作用域下全局通用
-					$state.reload();
-				};
 			}
 		});
 	}
