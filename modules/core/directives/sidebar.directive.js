@@ -10,10 +10,12 @@ angular.module('core').directive('sideCollapse', function () {
         },
         link: function (scope, ele, attr) {
             var sideObj = angular.element('.sidebar'),
+                subObj = angular.element('.sub-nav a'),
                 rightObj = angular.element('.right-content'),
                 wordObj = sideObj.find('span'),
                 leftWidth = sideObj.width(),
-                marLeft = parseInt(rightObj.css('marginLeft'));
+                marLeft = parseInt(rightObj.css('marginLeft')),
+                subLeft = parseInt(subObj.css('paddingLeft'));
             var anim = function () {
                 // console.log(sideObj, rightObj);
                 if (scope.close) {
@@ -24,6 +26,10 @@ angular.module('core').directive('sideCollapse', function () {
                     rightObj.stop(false, true).animate({
                         marginLeft: 60
                     }, 500);
+                    subObj.stop(false, true).animate({
+                        paddingLeft: 0,
+                        fontSize: 12
+                    }, 200).css('text-align', 'center');
                 } else {
                     sideObj.stop(false, true).animate({
                         width: leftWidth
@@ -32,6 +38,10 @@ angular.module('core').directive('sideCollapse', function () {
                     rightObj.stop(false, true).animate({
                         marginLeft: marLeft
                     }, 300);
+                    subObj.stop(false, true).animate({
+                        paddingLeft: subLeft,
+                        fontSize: 14
+                    }, 200).css('text-align', 'left');
                 }
                 scope.close = !scope.close;
                 scope.$apply();
@@ -119,7 +129,8 @@ angular.module('core').directive('tips', function () {
                     arrowObj.css('border-right-color', bgColor);
 
                     tipObj.css({
-                        'top': compareHeight(tipObjOHeight, objOHeight),
+                        // 'top': compareHeight(tipObjOHeight, objOHeight),
+                        'top': 5.5,
                         'left': objWidth + 10
                     });
                     // console.log(arrowObj, tipObjHeight, arrowObjHeight, arrowObjWidth);

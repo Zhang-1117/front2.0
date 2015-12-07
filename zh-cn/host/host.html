@@ -1,43 +1,26 @@
-<h3 class="main-title">云主机</h3>
+<h3 class="main-title">Product Name</h3>
 
 <div class="btns yo-btns">
     <button type="button" class="btn btn-warning">
-        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> 创建主机
-    </button>
-    <button type="button" class="btn btn-default">
-        <span class="glyphicon glyphicon-play" aria-hidden="true"></span> 开机
-    </button>
-    <button type="button" class="btn btn-default">
-        <span class="glyphicon glyphicon-stop" aria-hidden="true"></span> 关机
-    </button>
-    <button type="button" class="btn btn-default">
-        <span class="glyphicon glyphicon-repeat" aria-hidden="true"></span> 重启
-    </button>
-    <button type="button" class="btn btn-default">
-        登录(VNC)
-    </button>
-    <button type="button" class="btn btn-default">
-        <span class="glyphicon glyphicon-tasks" aria-hidden="true"></span> 制作镜像
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> add
     </button>
     <button type="button" class="btn btn-default" ng-click="del()" ng-disabled="!deleteBtn">
-        <span class="glyphicon glyphicon-remove"></span> 删除
+        <span class="glyphicon glyphicon-remove"></span> del
     </button>
     <div class="btn-group" dropdown>
         <button class="btn btn-default dropdown-toggle" dropdown-toggle aria-haspopup="true" aria-expanded="true">
-            <span class="glyphicon glyphicon-th-list"></span> 更多操作 <span class="caret"></span>
+            <span class="glyphicon glyphicon-th-list"></span> more <span class="caret"></span>
         </button>
         <ul class="dropdown-menu">
-            <li><a href="javascript:;"><span class="glyphicon glyphicon-briefcase"></span> 升级配置</a></li>
-            <li><a href="javascript:;"><span class="glyphicon glyphicon-cog"></span> 重装操作系统</a></li>
-            <li><a href="javascript:;"><span class="glyphicon glyphicon-search"></span> 修改主机密码</a></li>
-            <li><a href="javascript:;"><span class="glyphicon glyphicon-list-alt"></span> 查看操作日志</a></li>
+            <li><a href="javascript:;"><span class="glyphicon glyphicon-cog"></span> 设置</a></li>
+            <li><a href="javascript:;"><span class="glyphicon glyphicon-search"></span> 搜索</a></li>
         </ul>
     </div>
     <button type="button" class="btn btn-default" ng-click="refresh()">
         <span class="glyphicon glyphicon-refresh"></span>
     </button>
     <div class="input-group pull-right col-sm-2">
-        <input type="text" class="form-control" placeholder="主机名称/内网IP/外网IP" ng-model="query.keywords">
+        <input type="text" class="form-control" ng-model="query.keywords">
         <span class="input-group-btn">
             <button class="btn btn-default" type="button" ng-click="search()"><span class="glyphicon glyphicon-search"></span></button>
         </span>

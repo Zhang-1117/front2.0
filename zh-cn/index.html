@@ -14,20 +14,12 @@
 <div class="navbar navbar-default" role="navigation">
     <div class="navbar-header clearfix">
         <a ui-sref="home" class="navbar-brand logo"></a>
-        <span class="pull-left version">0.1Beta</span>
-        <a href="javascript:;" side-collapse close="coll" class="pull-left side-open"></a>
-        <div class="pull-left other-links text-center"><span>阳光云官网</span><span class="chevron-down"></span>
-            <div class="absol">
-                <a href="http://www.suncloud.cn" target="_blank">阳光云首页</a>
-                <a href="http://www.suncloud.cn/sundns_host.html" target="_blank">云产品</a>
-                <a href="http://www.suncloud.cn/sundns_business_cloud.html" target="_blank">解决方案</a>
-                <a href="http://www.suncloud.cn/sundns_about_company.html" target="_blank">关于我们</a>
-            </div>
-        </div>
+        <span class="pull-left version">ver 2.0</span>
+        <a href="javascript:;" side-collapse close="coll" class="glyphicon glyphicon-menu-hamburger pull-left side-open"></a>
     </div>
     <div class="clearfix nav-right">
         <div class="pull-right nav-user rela">
-            <span class="glyphicon glyphicon-user"></span>&nbsp;<span id="gamecloud_username">lvhao@yovole.com</span> <span class="chevron-down"></span>
+            <span class="glyphicon glyphicon-user"></span>&nbsp;<span>test@yovole.com</span> <span class="chevron-down"></span>
             <div class="absol">
                 <a href="javascript:;" class="text-right logout"><span class="glyphicon glyphicon-log-out"></span> 退出</a>
             </div>
@@ -39,24 +31,24 @@
 <div class="rela main-content">
     <div class="absol sidebar">
         <ul class="nav nav-pills nav-stacked">
-            <li ng-class="{active: $state.includes('home')}" tips message="控制台首页" direc="right" close="coll">
+            <li ng-class="{active: $state.includes('home')}" tips message="首页" direc="right" close="coll">
                 <a ui-sref="home">
                     <i class="icon-yo-nav yo-home"></i>
-                    <span>控制台首页</span>
+                    <span>首页</span>
                 </a>
             </li>
-            <li ng-class="{active: $state.includes('host')}" tips message="云主机" direc="right" close="coll">
+            <li ng-class="{active: $state.includes('host')}" tips message="item1" direc="right" close="coll">
                 <a ui-sref="host">
                     <i class="icon-yo-nav yo-host"></i>
-                    <span>云主机</span>
+                    <span>item1</span>
                 </a>
             </li>
         </ul>
         <div class="sidebar-bottom absol clearfix">
-            <a href="javascript:void(0);" class="text-center pull-left" onClick="javascript:window.open('http://www.sundns.com/custom_service_link.php', '_blank', 'height=544, width=644,toolbar=no,scrollbars=no,menubar=no,status=no');" ng-class="{small: !coll}" tips message="客服咨询" direc="{{ coll ? 'top' : 'right' }}" color="#fd8016">
+            <a href="javascript:void(0);" class="text-center pull-left" ng-class="{small: !coll}" tips message="客服咨询" direc="{{ coll ? 'top' : 'right' }}" color="#fd8016">
                 <i class="icon-yo-nav yo-lync"></i>
             </a>
-            <a href="javascript:void(0);" class="text-center pull-left" ng-class="{small: !coll}" tips message="咨询热线: 400-720-0020" direc="{{ coll ? 'top' : 'right' }}" color="#fd8016">
+            <a href="javascript:void(0);" class="text-center pull-left" ng-class="{small: !coll}" tips message="咨询热线" direc="{{ coll ? 'top' : 'right' }}" color="#fd8016">
                 <i class="icon-yo-nav yo-phone"></i>
             </a>
         </div>

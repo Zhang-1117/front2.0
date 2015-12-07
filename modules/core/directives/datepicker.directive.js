@@ -6,7 +6,7 @@
  */
 
 angular.module('core')
-.directive('yodatepicker', function(){
+.directive('yodatepicker', function($timeout){
 	return {
 		restrict: 'AE',
 		replace: true,
@@ -15,7 +15,9 @@ angular.module('core')
 			maxDate: '=',
 			minDate: '=',
 			format: '@',
-			disabled: '@'
+			disabled: '@',
+			mychange: '=change',
+			searchEnabled: '='
 		},
 		template: '<div class="input-group">' +
 					'<input type="text" class="form-control" ' +
@@ -28,11 +30,12 @@ angular.module('core')
 						'current-text="今天" ' +
 						'clear-text="清除" ' +
 						'close-text="关闭" ' +
+						'ng-change="change()"' +
 					' />' +
 					'<span class="input-group-btn">' +
 						'<button type="button" class="btn btn-default"' +
-							'ng-click="open($event)">' +
-						'<i class="glyphicon glyphicon-calendar"></i>{{format}}' +
+							'ng-click="open($event)" ng-disabled="searchEnabled">' +
+						'<i class="glyphicon glyphicon-calendar"></i>' +
 						'</button>' +
 					'</span>' +
 				'</div>',
@@ -43,6 +46,12 @@ angular.module('core')
 				$event.stopPropagation();
 
 				scope.opened = true;
+			};
+
+			scope.change = function () {
+				$timeout(function () {
+					scope.mychange && scope.mychange();
+				}, 0);
 			};
 		}
 	};
